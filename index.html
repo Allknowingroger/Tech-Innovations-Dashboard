@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="https://websim.ai" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnoVault - Future Tech Explorer</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Outfit:wght@300;600;800&display=swap" rel="stylesheet">
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.17.0"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    
+    <header>
+        <div class="header-content">
+            <h1 class="logo">Inno<span>Vault</span></h1>
+            <div class="search-bar-wrapper">
+                <input type="search" id="search-input" placeholder="Search the future..." aria-label="Search innovations">
+                <kbd>/</kbd>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Spotlight Section -->
+        <section id="spotlight" class="spotlight-section">
+            <div class="spotlight-card glass">
+                <div class="spotlight-placeholder">
+                    <p>Select an innovation to explore its details</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filters Section -->
+        <nav id="category-filters" class="filters-nav">
+            <button class="filter-pill active" data-category="all">All Tech</button>
+            <!-- Categories will be injected here -->
+        </nav>
+
+        <!-- Loader -->
+        <div id="loader" class="loader">
+            <div class="cube-wrapper">
+                <div class="cube">
+                    <div class="face front"></div>
+                    <div class="face back"></div>
+                    <div class="face right"></div>
+                    <div class="face left"></div>
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+                </div>
+            </div>
+            <p>Scanning the horizon for breakthroughs...</p>
+        </div>
+
+        <!-- Error & Empty States -->
+        <div id="error-message" class="error-message glass" role="alert"></div>
+        <div id="no-results-message" class="no-results-message" role="status"></div>
+
+        <!-- Main Dashboard -->
+        <div class="dashboard" id="dashboard">
+            <!-- Innovation cards will be dynamically injected here -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 InnoVault Engine. Powered by Gemini 3.</p>
+    </footer>
+
+    <script type="module" src="index.tsx"></script>
+</body>
+</html>
